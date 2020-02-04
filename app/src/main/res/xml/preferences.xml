@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ListPreference
+        android:key="pref_routineType"
+        android:dialogTitle="Routine Type"
+        android:entries="@array/pref_RoutineType"
+        android:entryValues="@array/pref_RoutineType"
+        android:summary="Teacher or Student"
+        android:title="Routine Type"></ListPreference>
+    <ListPreference
+        android:key="pref_dept"
+        android:dialogTitle="Department"
+        android:entries="@array/pref_departments"
+        android:entryValues="@array/pref_departments"
+        android:summary="Select your department"
+        android:title="Department"></ListPreference>
+    <PreferenceCategory
+        android:title="Teacher"
+        android:key="pref_teacher">
+
+        <ListPreference
+            android:dialogTitle="Name"
+            android:entries="@array/pref_Tname"
+            android:entryValues="@array/pref_Tname"
+            android:key="pref_teacherName"
+            android:summary="Select Your Name"
+            android:title="Teacher's Name"></ListPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Student"
+        android:key="pref_student">
+
+        <ListPreference
+            android:dialogTitle="Semester"
+            android:entries="@array/pref_semester"
+            android:entryValues="@array/pref_semester"
+            android:key="pref_semester"
+            android:summary="Select Your Semester"
+            android:title="Semester"></ListPreference>
+        <ListPreference
+            android:dialogTitle="Section"
+            android:entries="@array/pref_sections"
+            android:entryValues="@array/pref_sections"
+            android:key="pref_sec"
+            android:summary="Select Your Section"
+            android:title="Section"></ListPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

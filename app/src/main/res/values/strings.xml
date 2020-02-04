@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="open">Navigation Drawer Opened</string>
+    <string name="close">Navigation Drawer Closed</string>
+
+    <string name="app_name">My Daily VU</string>
+
+    <string-array name="routine">
+        <item>Select routine</item>
+        <item>1st - A</item>
+        <item>1st - B</item>
+        <item>1st - C</item>
+        <item>1st - D</item>
+        <item>1st - E</item>
+        <item>2nd - A</item>
+        <item>2nd - B</item>
+        <item>2nd - C</item>
+        <item>2nd - D</item>
+        <item>2nd - E</item>
+        <item>3rd - A</item>
+        <item>3rd - B</item>
+        <item>3rd - C</item>
+        <item>3rd - D</item>
+        <item>3rd - E</item>
+        <item>3rd - G - A</item>
+        <item>3rd - G - B</item>
+        <item>3rd - G - C</item>
+        <item>3rd - G - D</item>
+        <item>3rd - G - E</item>
+        <item>4th - A</item>
+        <item>4th - B</item>
+        <item>4th - C</item>
+        <item>4th - D</item>
+        <item>4th - E</item>
+        <item>5th - A</item>
+        <item>5th - B</item>
+        <item>5th - C</item>
+        <item>5th - D</item>
+        <item>5th - E</item>
+        <item>6th - A</item>
+        <item>6th - B</item>
+        <item>6th - C</item>
+        <item>6th - D</item>
+        <item>6th - E</item>
+        <item>6th - G - A</item>
+        <item>6th - G - B</item>
+        <item>6th - G - C</item>
+        <item>6th - G - D</item>
+        <item>6th - G - E</item>
+        <item>7th - A</item>
+        <item>7th - B</item>
+        <item>7th - C</item>
+        <item>7th - D</item>
+        <item>7th - E</item>
+        <item>8th - A</item>
+        <item>8th - B</item>
+        <item>8th - C</item>
+        <item>8th - D</item>
+        <item>8th - E</item>
+        <item>9th - A</item>
+        <item>9th - B</item>
+        <item>9th - C</item>
+        <item>9th - D</item>
+        <item>9th - E</item>
+        <item>9th - G - A</item>
+        <item>9th - G - B</item>
+        <item>9th - G - C</item>
+        <item>9th - G - D</item>
+        <item>9th - G - E</item>
+        <item>10th - A</item>
+        <item>10th - B</item>
+        <item>10th - C</item>
+        <item>10th - D</item>
+        <item>10th - E</item>
+        <item>11th - A</item>
+        <item>11th - B</item>
+        <item>11th - C</item>
+        <item>11th - D</item>
+        <item>11th - E</item>
+        <item>12th - A</item>
+        <item>12th - B</item>
+        <item>12th - C</item>
+        <item>12th - D</item>
+        <item>12th - E</item>
+        <item>12th - G - A</item>
+        <item>12th - G - B</item>
+        <item>12th - G - C</item>
+        <item>12th - G - D</item>
+        <item>12th - G - E</item>
+    </string-array>
+
+    <string-array name="semester">
+        <item>Select semester</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="section">
+        <item>Select section</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+
+    <string-array name="day">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+    </string-array>
+
+    <string-array name="subject">
+        <item>Select subject</item>
+        <item>CSE - 411</item>
+        <item>CSE - 413</item>
+        <item>CSE - 414</item>
+        <item>CSE - 415</item>
+        <item>CSE - 416</item>
+        <item>CSE - 418</item>
+    </string-array>
+
+    <string-array name="department">
+        <item>CSE</item>
+    </string-array>
+
+    <string-array name="room">
+        <item>Select room</item>
+        <item>R1</item>
+        <item>R2</item>
+        <item>R3</item>
+        <item>EAB -101</item>
+        <item>101</item>
+        <item>102</item>
+        <item>201</item>
+        <item>202</item>
+        <item>301</item>
+        <item>302</item>
+        <item>401</item>
+        <item>402</item>
+        <item>501</item>
+        <item>502</item>
+        <item>NL</item>
+        <item>PL</item>
+        <item>SEL</item>
+        <item>ABACUS</item>
+    </string-array>
+
+    <string-array name="teacher">
+        <item>Select teacher</item>
+        <item>MSZ</item>
+        <item>KIM</item>
+        <item>SY</item>
+        <item>AF</item>
+        <item>AH</item>
+        <item>SP</item>
+        <item>RAK</item>
+        <item>SZ</item>
+        <item>URC</item>
+        <item>JF</item>
+        <item>MK</item>
+        <item>NAT</item>
+        <item>FW</item>
+        <item>SN</item>
+        <item>NH</item>
+        <item>SR</item>
+        <item>NSS</item>
+        <item>DH</item>
+        <item>TKA</item>
+        <item>MKD</item>
+        <item>MTI</item>
+        <item>NN</item>
+        <item>RIS</item>
+        <item>AAL</item>
+        <item>SAL</item>
+        <item>GS</item>
+        <item>EH</item>
+        <item>AY</item>
+        <item>AAS</item>
+        <item>MRI</item>
+        <item>AM</item>
+        <item>MMH</item>
+        <item>RI</item>
+        <item>SS</item>
+        <item>MP</item>
+    </string-array>
+
+</resources>

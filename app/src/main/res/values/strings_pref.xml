@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_departments">
+        <item>CSE</item>
+    </string-array>
+
+    <string-array name="pref_RoutineType">
+        <item>Teacher</item>
+        <item>Student</item>
+    </string-array>
+
+    <string-array name="pref_Tname">
+        <item>MSZ</item>
+        <item>KIM</item>
+        <item>SY</item>
+        <item>AF</item>
+        <item>AH</item>
+        <item>SP</item>
+        <item>RAK</item>
+        <item>SZ</item>
+        <item>URC</item>
+        <item>JF</item>
+        <item>MK</item>
+        <item>NAT</item>
+        <item>FW</item>
+        <item>SN</item>
+        <item>NH</item>
+        <item>SR</item>
+        <item>NSS</item>
+        <item>DH</item>
+        <item>TKA</item>
+        <item>MKD</item>
+        <item>MTI</item>
+        <item>NN</item>
+        <item>RIS</item>
+        <item>AAL</item>
+        <item>SAL</item>
+        <item>GS</item>
+        <item>EH</item>
+        <item>AY</item>
+        <item>AAS</item>
+        <item>MRI</item>
+        <item>AM</item>
+        <item>MMH</item>
+        <item>RI</item>
+        <item>SS</item>
+        <item>MP</item>
+    </string-array>
+
+    <string-array name="pref_semester">
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+        <item>4th</item>
+        <item>5th</item>
+        <item>6th</item>
+        <item>7th</item>
+        <item>8th</item>
+        <item>9th</item>
+        <item>10th</item>
+        <item>11th</item>
+        <item>12th</item>
+    </string-array>
+
+    <string-array name="pref_sections">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+
+</resources>

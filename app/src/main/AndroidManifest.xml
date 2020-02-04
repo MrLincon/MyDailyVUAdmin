@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mydailyvuadmin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.DetailsActivity"
+            android:parentActivityName=".Activity.RoutineActivity"></activity>
+        <activity
+            android:name=".Activity.AddClass2"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity
+            android:name=".AddClass"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity android:name=".Authentication.ConfirmActivity" />
+        <activity android:name=".Authentication.SignupActivity" />
+        <activity android:name=".Authentication.LoginActivity" />
+        <activity
+            android:name=".Activity.RoutineActivity"
+            android:label="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Routine_Settings.RoutineSettingsActivity"
+            android:parentActivityName=".Activity.RoutineActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
