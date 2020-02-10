@@ -5,6 +5,7 @@
     <color name="colorAccent">#66bb6a</color>
 
     <color name="colorText">#121416</color>
+    <color name="colorTextAlt">#fff</color>
     <color name="colorButton">#121416</color>
     <color name="colorButtonText">#fff</color>
 
@@ -22,5 +23,6 @@
     <color name="colorSelectedTextTab">#66bb6a</color>
 
     <color name="colorFab">#121416</color>
+    <color name="colorPopupWindow">#202020</color>
 
 </resources>

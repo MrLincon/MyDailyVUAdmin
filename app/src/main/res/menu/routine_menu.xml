@@ -9,10 +9,4 @@
         app:showAsAction="always">
     </item>
 
-    <item
-        android:id="@+id/aboutDev"
-        android:title="About dev"
-        app:showAsAction="never">
-    </item>
-
 </menu>

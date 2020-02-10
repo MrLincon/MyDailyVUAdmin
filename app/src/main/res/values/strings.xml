@@ -4,7 +4,7 @@
     <string name="open">Navigation Drawer Opened</string>
     <string name="close">Navigation Drawer Closed</string>
 
-    <string name="app_name">My Daily VU</string>
+    <string name="app_name">My Daily VU (Admin)</string>
 
     <string-array name="routine">
         <item>Select routine</item>
@@ -142,7 +142,7 @@
         <item>R1</item>
         <item>R2</item>
         <item>R3</item>
-        <item>EAB -101</item>
+        <item>EAB - 101</item>
         <item>101</item>
         <item>102</item>
         <item>201</item>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorViewPagerBackground"
-    tools:context=".Activity.AddClass2">
+    tools:context=".Modify_Routine.AddClassSunday">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -11,19 +11,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.DetailsActivity"
-            android:parentActivityName=".Activity.RoutineActivity"></activity>
+        <activity android:name=".Modify_Routine.EditRoutine"
+            android:parentActivityName=".Modify_Routine.DetailsActivity"></activity>
         <activity
-            android:name=".Activity.AddClass2"
+            android:name=".Modify_Routine.DetailsActivity"
             android:parentActivityName=".Activity.RoutineActivity" />
         <activity
-            android:name=".AddClass"
+            android:name=".Modify_Routine.AddClassSunday"
             android:parentActivityName=".Activity.RoutineActivity" />
-        <activity android:name=".MainActivity" />
         <activity
-            android:name=".FeedbackActivity"
+            android:name=".Modify_Routine.AddClassMonday"
             android:parentActivityName=".Activity.RoutineActivity" />
-        <activity android:name=".AboutActivity" />
+        <activity
+            android:name=".Modify_Routine.AddClassTuesday"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity
+            android:name=".Modify_Routine.AddClassWednesday"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity
+            android:name=".Modify_Routine.AddClassThursday"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity
+            android:name=".Activity.FeedbackActivity"
+            android:parentActivityName=".Activity.RoutineActivity" />
+        <activity android:name=".Activity.AboutActivity" />
         <activity
             android:name=".Activity.NotificationActivity"
             android:parentActivityName=".Activity.RoutineActivity" />

@@ -1,4 +1,4 @@
-package com.example.mydailyvuadmin;
+package com.example.mydailyvuadmin.Activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mydailyvuadmin.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
 public class AboutActivity extends AppCompatActivity {

@@ -9,18 +9,15 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.airbnb.lottie.LottieAnimationView;
-import com.example.mydailyvuadmin.Activity.AddClass2;
-import com.example.mydailyvuadmin.Activity.DetailsActivity;
+import com.example.mydailyvuadmin.Modify_Routine.AddClassSunday;
+import com.example.mydailyvuadmin.Modify_Routine.DetailsActivity;
 import com.example.mydailyvuadmin.Models.Routine;
 import com.example.mydailyvuadmin.Models.RoutineAdapter;
 import com.example.mydailyvuadmin.Models.RoutineRecyclerDecoration;
@@ -32,8 +29,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-import java.text.SimpleDateFormat;
-
 public class Fragment_Sunday extends Fragment {
 
     View view;
@@ -41,7 +36,6 @@ public class Fragment_Sunday extends Fragment {
     RecyclerView recyclerView;
     FloatingActionButton addClass;
 
-    private static final String PREF_NAME = "pref_name";
     private static final String PREF_TEACHERS_NAME = "pref_teacherName";
     private static final String PREF_SEMESTER = "pref_semester";
     private static final String PREF_SEC = "pref_sec";
@@ -53,6 +47,7 @@ public class Fragment_Sunday extends Fragment {
 
     private RoutineAdapter adapter;
 
+    public static final String EXTRA_ID = "com.example.mydailyvuadmin.EXTRA_ID";
     public static final String EXTRA_START_TIME = "com.example.mydailyvuadmin.EXTRA_START_TIME";
     public static final String EXTRA_END_TIME = "com.example.mydailyvuadmin.EXTRA_END_TIME";
     public static final String EXTRA_SEMESTER = "com.example.mydailyvuadmin.EXTRA_SEMESTER";
@@ -92,14 +87,16 @@ public class Fragment_Sunday extends Fragment {
             } else {
                 addClass.setVisibility(View.GONE);
             }
-        }else {
+        } else {
             addClass.setVisibility(View.GONE);
         }
 
         addClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent addClass = new Intent(getActivity(), AddClass2.class);
+                Intent addClass = new Intent(getActivity(), AddClassSunday.class);
+                String DAY = "Sunday";
+                addClass.putExtra(EXTRA_DAY, DAY);
                 startActivity(addClass);
             }
         });
@@ -114,10 +111,10 @@ public class Fragment_Sunday extends Fragment {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         String ROUTINE = sharedPreferences.getString(PREF_ROUTINE_TYPE, "");
-        String DEPARTMENT = sharedPreferences.getString(PREF_DEPT, "");
+        final String DEPARTMENT = sharedPreferences.getString(PREF_DEPT, "");
         String SEMESTER = sharedPreferences.getString(PREF_SEMESTER, "");
         String SECTION = sharedPreferences.getString(PREF_SEC, "");
-        String TEACHERS_NAME = sharedPreferences.getString(PREF_TEACHERS_NAME, "");
+        final String TEACHERS_NAME = sharedPreferences.getString(PREF_TEACHERS_NAME, "");
 
         String SEM = null;
 
@@ -166,7 +163,7 @@ public class Fragment_Sunday extends Fragment {
             recyclerView.setAdapter(adapter);
             adapter.startListening();
 
-            adapter.setOnItemClickListener(new  RoutineAdapter.OnItemClickListener()  {
+            adapter.setOnItemClickListener(new RoutineAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(DocumentSnapshot documentSnapshot) {
                     Routine routine = documentSnapshot.toObject(Routine.class);
@@ -185,22 +182,24 @@ public class Fragment_Sunday extends Fragment {
                     String sTime = routine.getStartTime();
                     String eTime = routine.getEndTime();
 
-                    intent.putExtra(EXTRA_SEMESTER,semester);
-                    intent.putExtra(EXTRA_SECTION,section);
-                    intent.putExtra(EXTRA_DEPARTMENT,department);
-                    intent.putExtra(EXTRA_DAY,day);
-                    intent.putExtra(EXTRA_TEACHER,teacher);
-                    intent.putExtra(EXTRA_SUBJECT,subject);
-                    intent.putExtra(EXTRA_ROUTINE,routineFor);
-                    intent.putExtra(EXTRA_ROOM,room);
-                    intent.putExtra(EXTRA_START_TIME,sTime);
-                    intent.putExtra(EXTRA_END_TIME,eTime);
+                    intent.putExtra(EXTRA_ID, id);
+                    intent.putExtra(EXTRA_SEMESTER, semester);
+                    intent.putExtra(EXTRA_SECTION, section);
+                    intent.putExtra(EXTRA_DEPARTMENT, department);
+                    intent.putExtra(EXTRA_DAY, day);
+                    intent.putExtra(EXTRA_TEACHER, teacher);
+                    intent.putExtra(EXTRA_SUBJECT, subject);
+                    intent.putExtra(EXTRA_ROUTINE, routineFor);
+                    intent.putExtra(EXTRA_ROOM, room);
+                    intent.putExtra(EXTRA_START_TIME, sTime);
+                    intent.putExtra(EXTRA_END_TIME, eTime);
 
-//                    startActivity(intent);
+                    startActivity(intent);
                 }
             });
         } else if (ROUTINE.equals("Teacher")) {
-            Query query = routine.whereEqualTo("teacher", TEACHERS_NAME)
+
+            Query query = routine.whereArrayContains("teachers",TEACHERS_NAME)
                     .whereEqualTo("day", "Sunday")
                     .whereEqualTo("department", DEPARTMENT)
                     .orderBy("am_pm", Query.Direction.ASCENDING)
@@ -211,14 +210,12 @@ public class Fragment_Sunday extends Fragment {
                     .build();
 
             adapter = new RoutineAdapter(options);
-
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             recyclerView.setAdapter(adapter);
             adapter.startListening();
 
-
-            adapter.setOnItemClickListener(new  RoutineAdapter.OnItemClickListener()  {
+            adapter.setOnItemClickListener(new RoutineAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(DocumentSnapshot documentSnapshot) {
                     Routine routine = documentSnapshot.toObject(Routine.class);
@@ -237,18 +234,19 @@ public class Fragment_Sunday extends Fragment {
                     String sTime = routine.getStartTime();
                     String eTime = routine.getEndTime();
 
-                    intent.putExtra(EXTRA_SEMESTER,semester);
-                    intent.putExtra(EXTRA_SECTION,section);
-                    intent.putExtra(EXTRA_DEPARTMENT,department);
-                    intent.putExtra(EXTRA_DAY,day);
-                    intent.putExtra(EXTRA_TEACHER,teacher);
-                    intent.putExtra(EXTRA_SUBJECT,subject);
-                    intent.putExtra(EXTRA_ROUTINE,routineFor);
-                    intent.putExtra(EXTRA_ROOM,room);
-                    intent.putExtra(EXTRA_START_TIME,sTime);
-                    intent.putExtra(EXTRA_END_TIME,eTime);
+                    intent.putExtra(EXTRA_ID, id);
+                    intent.putExtra(EXTRA_SEMESTER, semester);
+                    intent.putExtra(EXTRA_SECTION, section);
+                    intent.putExtra(EXTRA_DEPARTMENT, department);
+                    intent.putExtra(EXTRA_DAY, day);
+                    intent.putExtra(EXTRA_TEACHER, teacher);
+                    intent.putExtra(EXTRA_SUBJECT, subject);
+                    intent.putExtra(EXTRA_ROUTINE, routineFor);
+                    intent.putExtra(EXTRA_ROOM, room);
+                    intent.putExtra(EXTRA_START_TIME, sTime);
+                    intent.putExtra(EXTRA_END_TIME, eTime);
 
-//                    startActivity(intent);
+                    startActivity(intent);
                 }
             });
 

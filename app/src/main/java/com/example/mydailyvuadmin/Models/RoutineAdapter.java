@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mydailyvuadmin.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.List;
 
 public class RoutineAdapter extends FirestoreRecyclerAdapter<Routine, RoutineAdapter.NoteHolder> {
 
@@ -23,6 +27,7 @@ public class RoutineAdapter extends FirestoreRecyclerAdapter<Routine, RoutineAda
     public RoutineAdapter(@NonNull FirestoreRecyclerOptions<Routine> options) {
         super(options);
     }
+
 
     @Override
     protected void onBindViewHolder(@NonNull NoteHolder holder, int position, @NonNull Routine model) {

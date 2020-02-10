@@ -1,4 +1,4 @@
-package com.example.mydailyvuadmin;
+package com.example.mydailyvuadmin.Class;
 
 import android.content.Context;
 import android.content.SharedPreferences;

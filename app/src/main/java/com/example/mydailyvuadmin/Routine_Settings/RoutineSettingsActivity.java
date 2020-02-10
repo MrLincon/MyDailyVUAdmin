@@ -1,8 +1,11 @@
 package com.example.mydailyvuadmin.Routine_Settings;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.example.mydailyvuadmin.Activity.RoutineActivity;
 import com.example.mydailyvuadmin.R;
 
 public class RoutineSettingsActivity extends AppCompatActivity {
@@ -26,5 +29,12 @@ public class RoutineSettingsActivity extends AppCompatActivity {
                 return;
             getFragmentManager().beginTransaction().add(R.id.fragContainer, new RoutineSettingsFragment()).commit();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(RoutineSettingsActivity.this, RoutineActivity.class);
+        startActivity(intent);
     }
 }
