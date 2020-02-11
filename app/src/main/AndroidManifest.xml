@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity.OnboardingActivity"></activity>
         <activity android:name=".Modify_Routine.EditRoutine"
             android:parentActivityName=".Modify_Routine.DetailsActivity"></activity>
         <activity
@@ -41,9 +42,7 @@
         <activity android:name=".Authentication.ConfirmActivity" />
         <activity android:name=".Authentication.SignupActivity" />
         <activity android:name=".Authentication.LoginActivity" />
-        <activity
-            android:name=".Activity.RoutineActivity"
-            android:label="">
+        <activity android:name=".Activity.RoutineActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

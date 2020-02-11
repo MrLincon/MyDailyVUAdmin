@@ -81,9 +81,9 @@ public class RoutineActivity extends AppCompatActivity {
         //Theme Settings
         themeSettings = new ThemeSettings(this);
         if (themeSettings.loadNightModeState() == false) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
 
         //...............
@@ -118,6 +118,7 @@ public class RoutineActivity extends AppCompatActivity {
 
 //        For Action Bar
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbarTitle.setText("Routine");
 
 //        For Tab Layout
@@ -161,9 +162,9 @@ public class RoutineActivity extends AppCompatActivity {
         Switch drawerSwitch = (Switch) menuItem.getActionView().findViewById(R.id.darkModeSwitch);
         drawerSwitch.setClickable(false);
         if (themeSettings.loadNightModeState() == false) {
-            drawerSwitch.setChecked(true);
-        } else {
             drawerSwitch.setChecked(false);
+        } else {
+            drawerSwitch.setChecked(true);
         }
     }
 
@@ -402,6 +403,14 @@ public class RoutineActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+
+        if (firstStart) {
+            Intent intent = new Intent(RoutineActivity.this,OnboardingActivity.class);
+            startActivity(intent);
+        }
 
         navigationView.setCheckedItem(R.id.routine);
 

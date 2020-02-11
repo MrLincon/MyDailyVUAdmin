@@ -5,6 +5,7 @@
     <color name="colorAccent">#66bb6a</color>
 
     <color name="colorText">#eee</color>
+    <color name="colorTextSecondary">#80EEEEEE</color>
     <color name="colorTextAlt">#121416</color>
     <color name="colorButton">#ffffff</color>
     <color name="colorButtonText">#121416</color>
