@@ -1,42 +1,79 @@
 {
   "project_info": {
-    "project_number": "620882906316",
-    "firebase_url": "https://my-daily-vu-8e0d6.firebaseio.com",
-    "project_id": "my-daily-vu-8e0d6",
-    "storage_bucket": "my-daily-vu-8e0d6.appspot.com"
+    "project_number": "478874915804",
+    "firebase_url": "https://my-daily-vu-dbd3b.firebaseio.com",
+    "project_id": "my-daily-vu-dbd3b",
+    "storage_bucket": "my-daily-vu-dbd3b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:620882906316:android:cc746b945f14130e2f8669",
+        "mobilesdk_app_id": "1:478874915804:android:98318c09dacd6190f9b519",
         "android_client_info": {
-          "package_name": "com.example.mydailyvuadmin"
+          "package_name": "com.whitespace.mydailyvu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "620882906316-msg9subidmer4sn0gd4iqaji4hv0s9b6.apps.googleusercontent.com",
+          "client_id": "478874915804-8s4napdsr0rmpvq1u6ub6spshefpfi6g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.mydailyvuadmin",
+            "package_name": "com.whitespace.mydailyvu",
             "certificate_hash": "1eb4310822c28024127b3834f68d6f31d323b078"
           }
         },
         {
-          "client_id": "620882906316-ci60i1kl20l5bha1ggo9173m8frr5c22.apps.googleusercontent.com",
+          "client_id": "478874915804-91q23o2ijb6flin5o8167nu78bkgnn1q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD4lXhfz5nxkxkRkJrMdgPv44WMhdXJY4c"
+          "current_key": "AIzaSyANNDCF5h7_X-130fA0XjPYaAHamkg2DVM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "620882906316-ci60i1kl20l5bha1ggo9173m8frr5c22.apps.googleusercontent.com",
+              "client_id": "478874915804-91q23o2ijb6flin5o8167nu78bkgnn1q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478874915804:android:9cc19057577fca17f9b519",
+        "android_client_info": {
+          "package_name": "com.whitespace.mydailyvuadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478874915804-gpojml7kfrfed9mpoek4nc8egr2rmi81.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.whitespace.mydailyvuadmin",
+            "certificate_hash": "1eb4310822c28024127b3834f68d6f31d323b078"
+          }
+        },
+        {
+          "client_id": "478874915804-91q23o2ijb6flin5o8167nu78bkgnn1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANNDCF5h7_X-130fA0XjPYaAHamkg2DVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478874915804-91q23o2ijb6flin5o8167nu78bkgnn1q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

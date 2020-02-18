@@ -123,16 +123,6 @@
         <item>Thursday</item>
     </string-array>
 
-    <string-array name="subject">
-        <item>Select subject</item>
-        <item>CSE - 411</item>
-        <item>CSE - 413</item>
-        <item>CSE - 414</item>
-        <item>CSE - 415</item>
-        <item>CSE - 416</item>
-        <item>CSE - 418</item>
-    </string-array>
-
     <string-array name="department">
         <item>CSE</item>
     </string-array>
@@ -196,6 +186,364 @@
         <item>RI</item>
         <item>SS</item>
         <item>MP</item>
+    </string-array>
+
+
+    <string-array name="routine1">
+        <item>Select routine</item>
+        <item>1st - A</item>
+        <item>1st - B</item>
+        <item>1st - C</item>
+        <item>1st - D</item>
+        <item>1st - E</item>
+    </string-array>
+
+    <string-array name="routine2">
+        <item>Select routine</item>
+        <item>2nd - A</item>
+        <item>2nd - B</item>
+        <item>2nd - C</item>
+        <item>2nd - D</item>
+        <item>2nd - E</item>
+    </string-array>
+
+    <string-array name="routine3">
+        <item>Select routine</item>
+        <item>3rd - A</item>
+        <item>3rd - B</item>
+        <item>3rd - C</item>
+        <item>3rd - D</item>
+        <item>3rd - E</item>
+        <item>3rd - G - A</item>
+        <item>3rd - G - B</item>
+        <item>3rd - G - C</item>
+        <item>3rd - G - D</item>
+        <item>3rd - G - E</item>
+    </string-array>
+
+    <string-array name="routine4">
+        <item>Select routine</item>
+        <item>4th - A</item>
+        <item>4th - B</item>
+        <item>4th - C</item>
+        <item>4th - D</item>
+        <item>4th - E</item>
+    </string-array>
+
+    <string-array name="routine5">
+        <item>Select routine</item>
+        <item>5th - A</item>
+        <item>5th - B</item>
+        <item>5th - C</item>
+        <item>5th - D</item>
+        <item>5th - E</item>
+    </string-array>
+
+    <string-array name="routine6">
+        <item>Select routine</item>
+        <item>6th - A</item>
+        <item>6th - B</item>
+        <item>6th - C</item>
+        <item>6th - D</item>
+        <item>6th - E</item>
+        <item>6th - G - A</item>
+        <item>6th - G - B</item>
+        <item>6th - G - C</item>
+        <item>6th - G - D</item>
+        <item>6th - G - E</item>
+    </string-array>
+
+    <string-array name="routine7">
+        <item>Select routine</item>
+        <item>7th - A</item>
+        <item>7th - B</item>
+        <item>7th - C</item>
+        <item>7th - D</item>
+        <item>7th - E</item>
+    </string-array>
+
+    <string-array name="routine8">
+        <item>Select routine</item>
+        <item>8th - A</item>
+        <item>8th - B</item>
+        <item>8th - C</item>
+        <item>8th - D</item>
+        <item>8th - E</item>
+    </string-array>
+
+    <string-array name="routine9">
+        <item>Select routine</item>
+        <item>9th - A</item>
+        <item>9th - B</item>
+        <item>9th - C</item>
+        <item>9th - D</item>
+        <item>9th - E</item>
+        <item>9th - G - A</item>
+        <item>9th - G - B</item>
+        <item>9th - G - C</item>
+        <item>9th - G - D</item>
+        <item>9th - G - E</item>
+    </string-array>
+
+    <string-array name="routine10">
+        <item>Select routine</item>
+        <item>10th - A</item>
+        <item>10th - B</item>
+        <item>10th - C</item>
+        <item>10th - D</item>
+        <item>10th - E</item>
+    </string-array>
+
+    <string-array name="routine11">
+        <item>Select routine</item>
+        <item>11th - A</item>
+        <item>11th - B</item>
+        <item>11th - C</item>
+        <item>11th - D</item>
+        <item>11th - E</item>
+    </string-array>
+
+    <string-array name="routine12">
+        <item>Select routine</item>
+        <item>12th - A</item>
+        <item>12th - B</item>
+        <item>12th - C</item>
+        <item>12th - D</item>
+        <item>12th - E</item>
+        <item>12th - G - A</item>
+        <item>12th - G - B</item>
+        <item>12th - G - C</item>
+        <item>12th - G - D</item>
+        <item>12th - G - E</item>
+    </string-array>
+
+
+    <string-array name="subject1">
+        <item>Select subject</item>
+        <item>ENG - 111</item>
+        <item>MAT - 111</item>
+        <item>PHY - 111</item>
+        <item>PHY - 112</item>
+        <item>CSE - 111</item>
+        <item>CSE - 112</item>
+    </string-array>
+
+    <string-array name="subject2">
+        <item>Select subject</item>
+        <item>MAT - 121</item>
+        <item>CSE - 121</item>
+        <item>CSE - 122</item>
+        <item>CSE - 123</item>
+        <item>CSE - 124</item>
+    </string-array>
+
+    <string-array name="subject3">
+        <item>Select subject</item>
+        <item>MAT - 131</item>
+        <item>CSE - 131</item>
+        <item>CSE - 133</item>
+        <item>CSE - 134</item>
+        <item>CSE - 136</item>
+    </string-array>
+
+    <string-array name="subject4">
+        <item>Select subject</item>
+        <item>MAT - 121</item>
+        <item>CSE - 211</item>
+        <item>CSE - 212</item>
+        <item>CSE - 213</item>
+        <item>CSE - 214</item>
+    </string-array>
+
+    <string-array name="subject5">
+        <item>Select subject</item>
+        <item>BAN - 221</item>
+        <item>CSE - 221</item>
+        <item>CSE - 223</item>
+        <item>CSE - 224</item>
+        <item>CSE - 225</item>
+        <item>CSE - 226</item>
+    </string-array>
+
+    <string-array name="subject6">
+        <item>Select subject</item>
+        <item>STA - 231</item>
+        <item>CSE - 231</item>
+        <item>CSE - 232</item>
+        <item>CSE - 233</item>
+        <item>CSE - 234</item>
+        <item>CSE - 236</item>
+    </string-array>
+
+    <string-array name="subject7">
+        <item>Select subject</item>
+        <item>ACC - 311</item>
+        <item>CSE - 311</item>
+        <item>CSE - 312</item>
+        <item>CSE - 313</item>
+        <item>CSE - 314</item>
+        <item>CSE - 315</item>
+    </string-array>
+
+    <string-array name="subject8">
+        <item>Select subject</item>
+        <item>LAW - 321</item>
+        <item>CSE - 321</item>
+        <item>CSE - 323</item>
+        <item>CSE - 324</item>
+        <item>CSE - 325</item>
+        <item>CSE - 326</item>
+    </string-array>
+
+    <string-array name="subject9">
+        <item>Select subject</item>
+        <item>ECO - 331</item>
+        <item>CSE - 331</item>
+        <item>CSE - 332</item>
+        <item>CSE - 333</item>
+        <item>CSE - 334</item>
+        <item>CSE - 336</item>
+    </string-array>
+
+    <string-array name="subject10">
+        <item>Select subject</item>
+        <item>CSE - 411</item>
+        <item>CSE - 413</item>
+        <item>CSE - 414</item>
+        <item>CSE - 415</item>
+        <item>CSE - 416</item>
+        <item>CSE - 418</item>
+    </string-array>
+
+    <string-array name="subject11">
+        <item>Select subject</item>
+        <item>CSE - 421</item>
+        <item>CSE - 422</item>
+        <item>CSE - 423</item>
+        <item>CSE - 424</item>
+        <item>Option I (T)</item>
+        <item>Option I (L)</item>
+        <item>CSE - 425</item>
+        <item>CSE - 426</item>
+        <item>CSE - 427</item>
+        <item>CSE - 428</item>
+        <item>CSE - 429</item>
+        <item>CSE - 4210</item>
+    </string-array>
+
+    <string-array name="subject12">
+        <item>Select subject</item>
+        <item>CSE - 431</item>
+        <item>CSE - 432</item>
+        <item>Option II (T)</item>
+        <item>Option II (L)</item>
+        <item>Option III (T)</item>
+        <item>Option III (L)</item>
+        <item>CSE - 4316</item>
+        <item>CSE - 433</item>
+        <item>CSE - 434</item>
+        <item>CSE - 435</item>
+        <item>CSE - 436</item>
+        <item>CSE - 437</item>
+        <item>CSE - 438</item>
+        <item>CSE - 439</item>
+        <item>CSE - 4310</item>
+        <item>CSE - 4311</item>
+        <item>CSE - 4312</item>
+        <item>CSE - 4313</item>
+        <item>CSE - 4314</item>
+    </string-array>
+
+    <string-array name="subject">
+        <item>Select subject</item>
+        <item>ENG - 111</item>
+        <item>MAT - 111</item>
+        <item>PHY - 111</item>
+        <item>PHY - 112</item>
+        <item>CSE - 111</item>
+        <item>CSE - 112</item>
+        <item>MAT - 121</item>
+        <item>CSE - 121</item>
+        <item>CSE - 122</item>
+        <item>CSE - 123</item>
+        <item>CSE - 124</item>
+        <item>MAT - 131</item>
+        <item>CSE - 131</item>
+        <item>CSE - 133</item>
+        <item>CSE - 134</item>
+        <item>CSE - 136</item>
+        <item>MAT - 121</item>
+        <item>CSE - 211</item>
+        <item>CSE - 212</item>
+        <item>CSE - 213</item>
+        <item>CSE - 214</item>
+        <item>BAN - 221</item>
+        <item>CSE - 221</item>
+        <item>CSE - 223</item>
+        <item>CSE - 224</item>
+        <item>CSE - 225</item>
+        <item>CSE - 226</item>
+        <item>STA - 231</item>
+        <item>CSE - 231</item>
+        <item>CSE - 232</item>
+        <item>CSE - 233</item>
+        <item>CSE - 234</item>
+        <item>CSE - 236</item>
+        <item>ACC - 311</item>
+        <item>CSE - 311</item>
+        <item>CSE - 312</item>
+        <item>CSE - 313</item>
+        <item>CSE - 314</item>
+        <item>CSE - 315</item>
+        <item>LAW - 321</item>
+        <item>CSE - 321</item>
+        <item>CSE - 323</item>
+        <item>CSE - 324</item>
+        <item>CSE - 325</item>
+        <item>CSE - 326</item>
+        <item>ECO - 331</item>
+        <item>CSE - 331</item>
+        <item>CSE - 332</item>
+        <item>CSE - 333</item>
+        <item>CSE - 334</item>
+        <item>CSE - 336</item>
+        <item>CSE - 411</item>
+        <item>CSE - 413</item>
+        <item>CSE - 414</item>
+        <item>CSE - 415</item>
+        <item>CSE - 416</item>
+        <item>CSE - 418</item>
+        <item>CSE - 421</item>
+        <item>CSE - 422</item>
+        <item>CSE - 423</item>
+        <item>CSE - 424</item>
+        <item>Option I (T)</item>
+        <item>Option I (L)</item>
+        <item>CSE - 425</item>
+        <item>CSE - 426</item>
+        <item>CSE - 427</item>
+        <item>CSE - 428</item>
+        <item>CSE - 429</item>
+        <item>CSE - 4210</item>
+        <item>CSE - 431</item>
+        <item>CSE - 432</item>
+        <item>Option II (T)</item>
+        <item>Option II (L)</item>
+        <item>Option III (T)</item>
+        <item>Option III (L)</item>
+        <item>CSE - 4316</item>
+        <item>CSE - 433</item>
+        <item>CSE - 434</item>
+        <item>CSE - 435</item>
+        <item>CSE - 436</item>
+        <item>CSE - 437</item>
+        <item>CSE - 438</item>
+        <item>CSE - 439</item>
+        <item>CSE - 4310</item>
+        <item>CSE - 4311</item>
+        <item>CSE - 4312</item>
+        <item>CSE - 4313</item>
+        <item>CSE - 4314</item>
     </string-array>
 
 </resources>
