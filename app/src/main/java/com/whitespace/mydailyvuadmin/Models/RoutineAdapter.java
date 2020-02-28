@@ -32,6 +32,7 @@ public class RoutineAdapter extends FirestoreRecyclerAdapter<Routine, RoutineAda
         holder.teacher.setText(model.getTeacher());
         holder.routine.setText(model.getRoutine());
         holder.room.setText(model.getRoom());
+//        holder.orderH.setText(model.getOrderHour());
     }
 
     @NonNull
@@ -49,6 +50,7 @@ public class RoutineAdapter extends FirestoreRecyclerAdapter<Routine, RoutineAda
         TextView teacher;
         TextView routine;
         TextView room;
+//        TextView orderH;
 
         public NoteHolder(View itemView) {
             super(itemView);
@@ -58,6 +60,7 @@ public class RoutineAdapter extends FirestoreRecyclerAdapter<Routine, RoutineAda
             teacher = itemView.findViewById(R.id.teacher);
             routine = itemView.findViewById(R.id.routine);
             room = itemView.findViewById(R.id.room);
+//            orderH = itemView.findViewById(R.id.orderHour);
 
             mContext = itemView.getContext();
 

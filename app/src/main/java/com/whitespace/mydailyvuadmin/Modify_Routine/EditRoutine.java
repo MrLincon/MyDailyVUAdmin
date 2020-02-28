@@ -61,9 +61,20 @@ public class EditRoutine extends AppCompatActivity {
 
     TextView cardStartTime, cardEndTime, cardSubject, cardTeacher, cardRoutine, cardRoom;
 
-    String startTimeData, endTimeData, subjectData, teacher1Data, teacher2Data,
-            routineData, roomData, semesterData, sectionData, dayData, departmentData,
-            orderHourData, orderMinuteData, am_pm_Data;
+    String startTimeData;
+    String endTimeData;
+    String subjectData;
+    String teacher1Data;
+    String teacher2Data;
+    String routineData;
+    String roomData;
+    String semesterData;
+    String sectionData;
+    String dayData;
+    String departmentData;
+    int orderHourData;
+    int orderMinuteData;
+    String am_pm_Data;
 
     CheckBox checkBoxT;
     public String T;
@@ -73,7 +84,8 @@ public class EditRoutine extends AppCompatActivity {
     String format, am_pm;
     Calendar calendar;
     TimePickerDialog timepickerdialog;
-    public String orderInHour, orderInMinute;
+    private int orderInHour = 99;
+    private int orderInMinute = 99;
 
     private DocumentReference document_ref;
     private FirebaseFirestore db;
@@ -325,8 +337,8 @@ public class EditRoutine extends AppCompatActivity {
                         new TimePickerDialog.OnTimeSetListener() {
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                orderInHour = String.valueOf(hourOfDay);
-                                orderInMinute = String.valueOf(minute);
+                                orderInHour = hourOfDay;
+                                orderInMinute = minute;
                                 if (hourOfDay == 0) {
                                     hourOfDay = hourOfDay + 12;
                                     format = "AM";
@@ -396,8 +408,8 @@ public class EditRoutine extends AppCompatActivity {
                     subjectData = documentSnapshot.getString("subject");
                     routineData = documentSnapshot.getString("routine");
                     roomData = documentSnapshot.getString("room");
-                    orderHourData = documentSnapshot.getString("orderHour");
-                    orderMinuteData = documentSnapshot.getString("orderMinute");
+                    orderHourData = documentSnapshot.getLong("orderHour").intValue();
+                    orderMinuteData = documentSnapshot.getLong("orderMinute").intValue();
                     am_pm_Data = documentSnapshot.getString("am_pm");
 
                     List<String> teachersData = (List<String>) documentSnapshot.get("teachers");
@@ -482,14 +494,14 @@ public class EditRoutine extends AppCompatActivity {
                 }
                 final String Routine = routine;
                 final String Room = room;
-                String OrderHour = orderInHour;
-                String OrderMinute = orderInMinute;
+                int OrderHour = orderInHour;
+                int OrderMinute = orderInMinute;
                 String OrderAmPm = am_pm;
 
-                if (OrderHour == null) {
+                if (OrderHour == 99) {
                     OrderHour = orderHourData;
                 }
-                if (OrderMinute == null) {
+                if (OrderMinute == 99) {
                     OrderMinute = orderMinuteData;
                 }
                 if (OrderAmPm == null) {

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.whitespace.mydailyvuadmin">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,40 +12,79 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.whitespace.mydailyvuadmin.Activity.OnboardingActivity"></activity>
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Modify_Routine.EditRoutine"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Modify_Routine.DetailsActivity"></activity>
+            android:name=".VUBook.VUBookActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.RoutineActivity"></activity>
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Modify_Routine.DetailsActivity"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
+            android:name=".VUBook.DetailsActivityCR"
+            android:parentActivityName=".VUBook.VUBookActivity"
+            android:screenOrientation="portrait"></activity>
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Modify_Routine.AddClassSunday"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
+            android:name=".VUBook.DetailsActivityTeacher"
+            android:parentActivityName=".VUBook.VUBookActivity"
+            android:screenOrientation="portrait"></activity>
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Modify_Routine.AddClassMonday"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
+            android:name=".Profile.EditProfileActivity"
+            android:parentActivityName=".Profile.ProfileActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Modify_Routine.AddClassTuesday"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
+            android:name=".Profile.ProfileActivity"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Modify_Routine.AddClassWednesday"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
+            android:name=".Activity.OnboardingActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Modify_Routine.AddClassThursday"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
+            android:name=".Modify_Routine.EditRoutine"
+            android:parentActivityName=".Modify_Routine.DetailsActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Activity.FeedbackActivity"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
-        <activity android:name="com.whitespace.mydailyvuadmin.Activity.AboutActivity" />
+            android:name=".Modify_Routine.DetailsActivity"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Activity.NotificationActivity"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
-        <activity android:name="com.whitespace.mydailyvuadmin.Authentication.ConfirmActivity" />
-        <activity android:name="com.whitespace.mydailyvuadmin.Authentication.SignupActivity" />
-        <activity android:name="com.whitespace.mydailyvuadmin.Authentication.LoginActivity" />
+            android:name=".Modify_Routine.AddClassSunday"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Activity.RoutineActivity"
+            android:name=".Modify_Routine.AddClassMonday"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Modify_Routine.AddClassTuesday"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Modify_Routine.AddClassWednesday"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Modify_Routine.AddClassThursday"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FeedbackActivity"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Authentication.ConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Authentication.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Authentication.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RoutineActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,8 +93,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.whitespace.mydailyvuadmin.Routine_Settings.RoutineSettingsActivity"
-            android:parentActivityName="com.whitespace.mydailyvuadmin.Activity.RoutineActivity" />
+            android:name=".Routine_Settings.RoutineSettingsActivity"
+            android:parentActivityName=".Activity.RoutineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -6,11 +6,18 @@
     <item android:title="Campus">
         <menu>
             <group android:checkableBehavior="single">
-
+                <item
+                    android:id="@+id/profile"
+                    android:title="Profile"
+                    android:icon="@drawable/ic_person"></item>
                 <item
                     android:id="@+id/routine"
                     android:title="Routine"
                     android:icon="@drawable/ic_routine"></item>
+                <item
+                    android:id="@+id/vu_book"
+                    android:icon="@drawable/ic_tag_faces"
+                    android:title="VU Book"></item>
                 <item
                     android:id="@+id/change_routine"
                     android:icon="@drawable/ic_change_routine"
@@ -66,3 +73,4 @@
 <!--    </group>-->
 <!--</menu>-->
 <!--</item>-->
+

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -30,6 +31,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import com.whitespace.mydailyvuadmin.Profile.ProfileActivity;
 import com.whitespace.mydailyvuadmin.Authentication.LoginActivity;
 import com.whitespace.mydailyvuadmin.R;
 import com.whitespace.mydailyvuadmin.Routine.ViewPagerAdapter;
@@ -39,6 +41,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.whitespace.mydailyvuadmin.VUBook.VUBookActivity;
 
 import java.util.Calendar;
 
@@ -267,7 +270,20 @@ public class RoutineActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         switch (menuItem.getItemId()) {
+                            case R.id.profile:
+                                if (user == null) {
+                                    Intent log_in = new Intent(RoutineActivity.this, LoginActivity.class);
+                                    startActivity(log_in);
+                                } else {
+                                    Intent profile = new Intent(RoutineActivity.this, ProfileActivity.class);
+                                    startActivity(profile);
+                                }
+                                break;
                             case R.id.routine:
+                                break;
+                            case R.id.vu_book:
+                                Intent vubook = new Intent(RoutineActivity.this, VUBookActivity.class);
+                                startActivity(vubook);
                                 break;
                             case R.id.change_routine:
                                 Intent changeRoutine = new Intent(RoutineActivity.this, RoutineSettingsActivity.class);
@@ -284,9 +300,14 @@ public class RoutineActivity extends AppCompatActivity {
                                 }
                                 break;
                             case R.id.feedback:
-                                Intent feedback_intent = new Intent(RoutineActivity.this, FeedbackActivity.class);
-                                startActivity(feedback_intent);
-                                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                                Intent feedback = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "mydaily.vu@gmail.com"));
+
+                                try {
+                                    startActivity(Intent.createChooser(feedback, "Choose an e-mail client"));
+                                } catch (android.content.ActivityNotFoundException e) {
+                                    Toast.makeText(RoutineActivity.this, "There is no e-mail clint installed!", Toast.LENGTH_SHORT).show();
+
+                                }
                                 break;
                             case R.id.about:
                                 Intent about_intent = new Intent(RoutineActivity.this, AboutActivity.class);
@@ -407,7 +428,7 @@ public class RoutineActivity extends AppCompatActivity {
         boolean firstStart = prefs.getBoolean("firstStart", true);
 
         if (firstStart) {
-            Intent intent = new Intent(RoutineActivity.this,OnboardingActivity.class);
+            Intent intent = new Intent(RoutineActivity.this, OnboardingActivity.class);
             startActivity(intent);
             finish();
         }

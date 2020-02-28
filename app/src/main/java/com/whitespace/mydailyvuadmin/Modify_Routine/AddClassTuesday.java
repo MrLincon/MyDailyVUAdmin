@@ -60,7 +60,7 @@ public class AddClassTuesday extends AppCompatActivity {
     String format, am_pm;
     Calendar calendar;
     TimePickerDialog timepickerdialog;
-    public String orderInHour, orderInMinute;
+    int orderInHour, orderInMinute;
 
     private DocumentReference document_ref;
     private FirebaseFirestore db;
@@ -269,12 +269,10 @@ public class AddClassTuesday extends AppCompatActivity {
                     T = teacher1 + " + " + teacher2;
                     cardTeacher.setText(T);
                     spinnerTeacher2.setEnabled(true);
-                    Toast.makeText(getApplicationContext(), T, Toast.LENGTH_SHORT).show();
                 } else {
                     T = teacher1;
                     cardTeacher.setText(T);
                     spinnerTeacher2.setEnabled(false);
-                    Toast.makeText(getApplicationContext(), T, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -308,8 +306,8 @@ public class AddClassTuesday extends AppCompatActivity {
                         new TimePickerDialog.OnTimeSetListener() {
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                orderInHour = String.valueOf(hourOfDay);
-                                orderInMinute = String.valueOf(minute);
+                                orderInHour = hourOfDay;
+                                orderInMinute = minute;
                                 if (hourOfDay == 0) {
                                     hourOfDay = hourOfDay + 12;
                                     format = "AM";
@@ -438,8 +436,8 @@ public class AddClassTuesday extends AppCompatActivity {
                 }
                 final String Routine = routine;
                 final String Room = room;
-                final String OrderHour = orderInHour;
-                final String OrderMinute = orderInMinute;
+                int OrderHour = orderInHour;
+                int OrderMinute = orderInMinute;
                 final String OrderAmPm = am_pm;
 
 

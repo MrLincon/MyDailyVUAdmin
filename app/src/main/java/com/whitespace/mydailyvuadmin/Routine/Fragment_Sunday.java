@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -101,6 +102,7 @@ public class Fragment_Sunday extends Fragment {
             }
         });
 
+
         getRoutine();
 
         return view;
@@ -145,18 +147,17 @@ public class Fragment_Sunday extends Fragment {
         }
 
         if (ROUTINE.equals("Student")) {
-            Query query = routine.whereEqualTo("semester", SEM)
+            Query query1 = routine.whereEqualTo("semester", SEM)
                     .whereEqualTo("section", SECTION)
                     .whereEqualTo("department", DEPARTMENT)
                     .whereEqualTo("day", "Sunday")
-                    .orderBy("am_pm", Query.Direction.ASCENDING)
                     .orderBy("orderHour", Query.Direction.ASCENDING)
                     .orderBy("orderMinute", Query.Direction.ASCENDING);
-            FirestoreRecyclerOptions<Routine> options = new FirestoreRecyclerOptions.Builder<Routine>()
-                    .setQuery(query, Routine.class)
+            FirestoreRecyclerOptions<Routine> options1 = new FirestoreRecyclerOptions.Builder<Routine>()
+                    .setQuery(query1, Routine.class)
                     .build();
 
-            adapter = new RoutineAdapter(options);
+            adapter = new RoutineAdapter(options1);
 
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -199,10 +200,9 @@ public class Fragment_Sunday extends Fragment {
             });
         } else if (ROUTINE.equals("Teacher")) {
 
-            Query query = routine.whereArrayContains("teachers",TEACHERS_NAME)
+            Query query = routine.whereArrayContains("teachers", TEACHERS_NAME)
                     .whereEqualTo("day", "Sunday")
                     .whereEqualTo("department", DEPARTMENT)
-                    .orderBy("am_pm", Query.Direction.ASCENDING)
                     .orderBy("orderHour", Query.Direction.ASCENDING)
                     .orderBy("orderMinute", Query.Direction.ASCENDING);
             FirestoreRecyclerOptions<Routine> options = new FirestoreRecyclerOptions.Builder<Routine>()

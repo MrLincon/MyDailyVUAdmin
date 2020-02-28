@@ -2,27 +2,27 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="3dp"
-    app:cardBackgroundColor="@color/colorCard"
     android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground">
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/colorCard"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize"
             android:background="@color/colorRoutineHeader"
-            android:gravity="center">
+            android:gravity="center"
+            android:minHeight="?attr/actionBarSize">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -33,26 +33,27 @@
                     android:id="@+id/startTime"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text="9.00 AM"
                     android:textColor="@color/colorRoutineHeaderText"
-                    android:textSize="24sp"
-                    android:gravity="center"></TextView>
+                    android:textSize="24sp"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=" - "
                     android:textColor="@color/colorRoutineHeaderText"
-                    android:textSize="24sp"
-                    android:gravity="center"></TextView>
+                    android:textSize="24sp"></TextView>
 
                 <TextView
                     android:id="@+id/endTime"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text="9.25 AM"
                     android:textColor="@color/colorRoutineHeaderText"
-                    android:textSize="24sp"
-                    android:gravity="center"></TextView>
+                    android:textSize="24sp"></TextView>
 
             </LinearLayout>
 
@@ -84,10 +85,10 @@
                     android:id="@+id/subject"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CSE - 325"
                     android:layout_marginTop="4dp"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorText"></TextView>
+                    android:text="CSE - 325"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></TextView>
 
             </LinearLayout>
 
@@ -95,10 +96,10 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:orientation="vertical"
-                android:layout_below="@id/linearLayout1">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -109,10 +110,10 @@
                     android:id="@+id/teacher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MMA"
                     android:layout_marginTop="4dp"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorText"></TextView>
+                    android:text="MMA"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></TextView>
 
             </LinearLayout>
 
@@ -120,9 +121,9 @@
                 android:id="@+id/linearLayout3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_alignParentEnd="true"
                 android:orientation="vertical">
 
                 <TextView
@@ -136,21 +137,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:text="9th - A"
                     android:layout_marginTop="4dp"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorText"></TextView>
+                    android:text="9th - A"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></TextView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout3"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:orientation="vertical"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@id/linearLayout3">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -163,15 +164,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:text="R1"
                     android:layout_marginTop="4dp"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorText"></TextView>
+                    android:text="R1"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></TextView>
 
             </LinearLayout>
 
         </RelativeLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/orderHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="5sp"></TextView>
 
 </androidx.cardview.widget.CardView>

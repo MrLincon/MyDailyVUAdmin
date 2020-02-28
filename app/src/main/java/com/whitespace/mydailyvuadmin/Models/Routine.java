@@ -5,14 +5,15 @@ import java.util.List;
 public class Routine {
 
     private String startTime,endTime,subject,department,
-            teacher,routine,room,orderHour,orderMinute,
+            teacher,routine,room,
             am_pm,semester,section,day;
+    private int orderHour,orderMinute;
      private List<String> teachers;
 
     public Routine() {
     }
 
-    public Routine(String startTime, String endTime, String subject, String department, String teacher, String routine, String room, String orderHour, String orderMinute, String am_pm, String semester, String section, String day, List<String> teachers) {
+    public Routine(String startTime, String endTime, String subject, String department, String teacher, String routine, String room, String am_pm, String semester, String section, String day, int orderHour, int orderMinute, List<String> teachers) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.subject = subject;
@@ -20,12 +21,12 @@ public class Routine {
         this.teacher = teacher;
         this.routine = routine;
         this.room = room;
-        this.orderHour = orderHour;
-        this.orderMinute = orderMinute;
         this.am_pm = am_pm;
         this.semester = semester;
         this.section = section;
         this.day = day;
+        this.orderHour = orderHour;
+        this.orderMinute = orderMinute;
         this.teachers = teachers;
     }
 
@@ -85,22 +86,6 @@ public class Routine {
         this.room = room;
     }
 
-    public String getOrderHour() {
-        return orderHour;
-    }
-
-    public void setOrderHour(String orderHour) {
-        this.orderHour = orderHour;
-    }
-
-    public String getOrderMinute() {
-        return orderMinute;
-    }
-
-    public void setOrderMinute(String orderMinute) {
-        this.orderMinute = orderMinute;
-    }
-
     public String getAm_pm() {
         return am_pm;
     }
@@ -131,6 +116,22 @@ public class Routine {
 
     public void setDay(String day) {
         this.day = day;
+    }
+
+    public int getOrderHour() {
+        return orderHour;
+    }
+
+    public void setOrderHour(int orderHour) {
+        this.orderHour = orderHour;
+    }
+
+    public int getOrderMinute() {
+        return orderMinute;
+    }
+
+    public void setOrderMinute(int orderMinute) {
+        this.orderMinute = orderMinute;
     }
 
     public List<String> getTeachers() {

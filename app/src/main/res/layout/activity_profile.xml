@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/edit_cr_profile_toolbar"
+            layout="@layout/toolbar_layout"></include>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorView"></View>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="24dp">
+
+                    <ProgressBar
+                        android:id="@+id/progress_loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/add_image"></ProgressBar>
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/add_image"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="24dp"
+                        android:src="@drawable/add_user_pic"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/colorAccent"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></com.mikhaellopez.circularimageview.CircularImageView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Name"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Full name"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="E-mail"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="E-mail"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/tvDepartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Department"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Department"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Status"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></TextView>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Teacher"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></androidx.appcompat.widget.AppCompatCheckBox>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="CR"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></androidx.appcompat.widget.AppCompatCheckBox>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/student"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Student"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"></androidx.appcompat.widget.AppCompatCheckBox>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/tvSemester"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Semester"
+                            android:textColor="@color/colorTextSecondary"
+                            android:textSize="14sp"
+                            android:visibility="gone"></TextView>
+
+                        <TextView
+                            android:id="@+id/semester"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:hint="Semester"
+                            android:visibility="gone"
+                            android:textSize="18sp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="@color/colorText"></TextView>
+
+                        <View
+                            android:id="@+id/viewSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@color/colorAccent"
+                            android:visibility="gone"></View>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+
+                        <TextView
+                            android:id="@+id/tvSection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Section"
+                            android:textColor="@color/colorTextSecondary"
+                            android:textSize="14sp"
+                            android:visibility="gone"></TextView>
+
+                        <TextView
+                            android:id="@+id/section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:hint="Section"
+                            android:gravity="right"
+                            android:textSize="18sp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:visibility="gone"
+                            android:textColor="@color/colorText"></TextView>
+
+                        <View
+                            android:id="@+id/viewSemester"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:visibility="gone"
+                            android:background="@color/colorAccent"></View>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Student ID"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="ID"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:id="@+id/viewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:visibility="gone"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/tvDesignation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Designation"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Designation"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:id="@+id/viewDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:visibility="gone"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/tvOffice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Office"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/office"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Office"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:id="@+id/viewOffice"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:visibility="gone"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/tvCounselingHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Counseling hour"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/counseling_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Counseling hour"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:id="@+id/viewCounseling_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:visibility="gone"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/tvContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Contact"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Contact"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorText"></TextView>
+
+                <View
+                    android:id="@+id/viewContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:visibility="gone"
+                    android:background="@color/colorAccent"></View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"></View>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:backgroundTint="@color/colorFab"
+        android:src="@drawable/ic_change_routine"
+        android:tint="@color/colorAccent"
+        app:fabSize="normal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
